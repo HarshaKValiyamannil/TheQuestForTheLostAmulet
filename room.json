@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Forsaken Crypt",
+    "description": "A dimly lit chamber filled with ancient sarcophagi and eerie silence",
+    "north": -1,
+    "south": 2,
+    "east": 1,
+    "west": -1
+  },
+  {
+    "name": "Enchanted Forest Clearing",
+    "description": "A tranquil clearing within a mystical forest, where sunlight filters through the canopy",
+    "north": -1,
+    "south": -1,
+    "east": -1,
+    "west": 0
+  },
+  {
+    "name": "Treacherous Caverns",
+    "description": "A network of dark and winding tunnels, with treacherous pitfalls and echoing whispers",
+    "north": 0,
+    "south": -1,
+    "east": 3,
+    "west": -1
+  },
+  {
+    "name": "Royal Library Archives",
+    "description" : "A vast room filled with dusty tomes and forgotten knowledge from ages past",
+    "north": -1,
+    "south": -1,
+    "east": -1,
+    "west": 2
+  }
+]
