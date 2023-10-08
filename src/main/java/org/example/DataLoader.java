@@ -11,14 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataLoader {
-    public List<Room> loadGameData() {
-        try {
-            List<Room> rooms = new ArrayList<>();
-            JSONParser parser = new JSONParser();
-            FileReader reader = new FileReader("rooms.json");
-            Object obj = parser.parse(reader);
+    private List<Room> rooms = new ArrayList<>();
 
-            JSONArray jsonArray = (JSONArray) obj;
+    public void loadRoomsData() {
+        JSONParser parser;
+        FileReader reader;
+        Object obj;
+        JSONArray jsonArray;
+
+        try {
+            parser = new JSONParser();
+            reader = new FileReader("rooms.json");
+            obj = parser.parse(reader);
+
+            jsonArray = (JSONArray) obj;
             for (Object o : jsonArray) {
                 JSONObject roomJson = (JSONObject) o;
 
@@ -33,7 +39,6 @@ public class DataLoader {
                 rooms.add(room);
             }
             reader.close();
-            return rooms;
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
